@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpyTruth - Descubra a Verdade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
+        }
+        
+        .phone-mockup {
+            position: relative;
+            perspective: 1000px;
+        }
+        
+        .phone-mockup::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50px;
+            background: linear-gradient(45deg, #ef4444, #7c2d12, #ef4444);
+            z-index: -1;
+            opacity: 0.7;
+            filter: blur(20px);
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(145deg, #171717, #1e1e1e);
+            border-left: 3px solid #ef4444;
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1e1e1e, #262626);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 12px rgba(239, 68, 68, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header/Nav -->
+    <header class="py-6 px-4 sm:px-8 border-b border-gray-800">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <span class="text-red-500">Spy</span><span>Truth</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#features" class="hover:text-red-400 transition">Recursos</a>
+                <a href="#testimonials" class="hover:text-red-400 transition">Depoimentos</a>
+                <a href="#faq" class="hover:text-red-400 transition">Dúvidas</a>
+            </div>
+            <button class="md:hidden text-gray-400">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 px-4 sm:px-8">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 glow-text">
+                    Ele diz que te ama.<br>
+                    Mas o que ele esconde do outro lado da tela?
+                </h1>
+                <p class="text-lg text-gray-400 mb-8 max-w-lg">
+                    Descubra a verdade silenciosamente com o app mais usado por quem não aceita ser feito de trouxa.
+                </p>
+                <a href="https://go.perfectpay.com.br/PPU38CPNMGI" class="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all transform hover:scale-105 pulse inline-block">
+                    QUERO DESCOBRIR AGORA
+                </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center phone-mockup">
+                <div class="relative w-64 h-auto">
+                    <img src="https://i.imgur.com/xlzCfZY.jpeg"
+                alt="Celular mostrando app de espionagem" class="w-full h-auto rounded-3xl border-4 border-gray-800">
+                    <div class="absolute -bottom-6 -right-6 bg-gray-900 p-3 rounded-full border-2 border-red-500">
+                        <i class="fas fa-lock-open text-red-500 text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 px-4 sm:px-8 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">
+                <span class="text-red-500">Tudo</span> que você precisa para descobrir a verdade
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="flex flex-col items-center text-center p-6 rounded-xl bg-gradient-to-b from-gray-800 to-gray-900 border border-gray-700">
+                    <div class="feature-icon rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-comment-slash text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Mensagens Apagadas</h3>
+                    <p class="text-gray-400">Acesse todas as mensagens, mesmo aquelas que foram deletadas para esconder algo de você.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="flex flex-col items-center text-center p-6 rounded-xl bg-gradient-to-b from-gray-800 to-gray-900 border border-gray-700">
+                    <div class="feature-icon rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-map-marker-alt text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Localização em Tempo Real</h3>
+                    <p class="text-gray-400">Saiba exatamente onde a pessoa está a qualquer momento, com histórico de locais visitados.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="flex flex-col items-center text-center p-6 rounded-xl bg-gradient-to-b from-gray-800 to-gray-900 border border-gray-700">
+                    <div class="feature-icon rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-eye-slash text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">App Invisível</h3>
+                    <p class="text-gray-400">O aplicativo fica completamente oculto no celular alvo, sem ícones ou notificações.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="flex flex-col items-center text-center p-6 rounded-xl bg-gradient-to-b from-gray-800 to-gray-900 border border-gray-700">
+                    <div class="feature-icon rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Instalação Rápida</h3>
+                    <p class="text-gray-400">Configuração em menos de 3 minutos. Você só precisa de acesso físico ao celular uma única vez.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 px-4 sm:px-8">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">
+                O que dizem <span class="text-red-500">quem já usou</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-red-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ana, 32 anos</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "Descobri a traição em 2 dias. Melhor do que viver na dúvida. O aplicativo mostrou todas as mensagens que ele apagava do WhatsApp."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-red-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Carlos, 28 anos</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "Pensei que era ciúmes da minha cabeça... mas não era. O histórico de localização mostrou que ela ia para um motel toda quarta-feira."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-red-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Fernanda, 35 anos</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "Instalei por desconfiança e descobri que ele era fiel. Foi a melhor coisa que fiz, agora tenho paz de espírito. Valeu cada centavo."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 px-4 sm:px-8 bg-gray-900">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-12">
+                Perguntas <span class="text-red-500">Frequentes</span>
+            </h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="border-b border-gray-700 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg focus:outline-none">
+                        <span>O aplicativo pode ser detectado?</span>
+                        <i class="fas fa-chevron-down text-red-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-400 hidden">
+                        Não, o App Espião foi desenvolvido para ser completamente invisível no dispositivo alvo. Não aparece na lista de aplicativos, não envia notificações e não consome bateria de forma perceptível.
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="border-b border-gray-700 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg focus:outline-none">
+                        <span>Preciso ter o celular da pessoa para instalar?</span>
+                        <i class="fas fa-chevron-down text-red-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-400 hidden">
+                        Não, você precisará apenas do número com o DDD do alvo. Todo o monitoramento é feito remotamente através do seu painel de controle.
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="border-b border-gray-700 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg focus:outline-none">
+                        <span>Funciona em iPhones (iOS)?</span>
+                        <i class="fas fa-chevron-down text-red-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-400 hidden">
+                        Sim, o App Espião está disponível tanto para dispositivos Android, como para IOS.
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="border-b border-gray-700 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg focus:outline-none">
+                        <span>É legal usar este aplicativo?</span>
+                        <i class="fas fa-chevron-down text-red-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-400 hidden">
+                        As leis variam de acordo com cada país. Em geral, monitorar um dispositivo sem o consentimento do proprietário pode ser ilegal. Recomendamos que você consulte as leis locais antes de usar nosso produto. Este aplicativo deve ser usado apenas em dispositivos que você possui ou tem permissão explícita para monitorar.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-16 px-4 sm:px-8 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Não viva mais na <span class="text-red-500">dúvida</span>
+            </h2>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+                A verdade pode doer, mas a dúvida destrói. Descubra hoje mesmo o que realmente está acontecendo.
+            </p>
+            <a href="https://go.perfectpay.com.br/PPU38CPNMGI" class="bg-red-600 hover:bg-red-700 text-white font-bold py-5 px-12 rounded-full text-xl transition-all transform hover:scale-105 inline-block">
+                <i class="fas fa-lock-open mr-2"></i> QUERO DESCOBRIR AGORA
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 sm:px-8 border-t border-gray-800 text-gray-500 text-sm">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-bold">
+                        <span class="text-red-500">Spy</span><span>Truth</span>
+                    </span>
+                </div>
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#" class="hover:text-gray-300">Termos de Uso</a>
+                    <a href="#" class="hover:text-gray-300">Política de Privacidade</a>
+                    <a href="#" class="hover:text-gray-300">Contato</a>
+                </div>
+                <div class="text-center md:text-right">
+                    <p>© 2023 SpyTruth. Todos os direitos reservados.</p>
+                    <p class="text-xs mt-2">Este site é apenas para fins informativos. O uso do app é de responsabilidade do comprador.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if(this.getAttribute('href') === '#') {
+                    e.preventDefault();
+                    return;
+                }
+                
+                if(this.getAttribute('href').startsWith('http')) return;
+                
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
